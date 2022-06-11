@@ -1,5 +1,6 @@
 import flask
 import os
+import pandas as pd
 
 #create an instance of Flask
 app = flask.Flask('Earthquake Model Deployment')
@@ -7,10 +8,6 @@ app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 @app.route('/')
 def home():
-    return "Halo dunia tipu tipu!"
-
-@app.route('/station/')
-def channel_station():
     metadata = pd.read_csv('data_temp.csv')
     data_station = {}
     for idx_ in range(len(metadata)):
