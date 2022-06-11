@@ -1,4 +1,5 @@
 import flask
+import os
 
 #create an instance of Flask
 app = flask.Flask('Earthquake Model Deployment')
