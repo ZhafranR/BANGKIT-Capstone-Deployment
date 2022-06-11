@@ -1,0 +1,5 @@
+runtime: python39
+
+service: test2
+
+entrypoint: gunicorn -b :$PORT orgnetsetos.wsgi
