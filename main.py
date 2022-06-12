@@ -26,6 +26,9 @@ def home():
             'Elevation':elevation_
         })
         data_station.update({int(idx_+1):each_station})
+
+        if int(idx_+1)==30:
+            break
     return flask.jsonify(data_station)
 
 if __name__ == "__main__":
