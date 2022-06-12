@@ -25,7 +25,7 @@ def home():
             'Longitude':long_,
             'Elevation':elevation_
         })
-        data_station.update({f'Station {idx_+1}':each_station})
+        data_station.update({{idx_+1}:each_station})
     return flask.jsonify(data_station)
 
 if __name__ == "__main__":
